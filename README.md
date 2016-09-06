@@ -1,5 +1,5 @@
 # Play REST API
-
+![alt-tag](/screenshoot.png)
 This is the project that goes along with the article.
 
 ## Appendix
