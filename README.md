@@ -16,6 +16,26 @@ sbt run
 
 Play will start up on the HTTP port at http://localhost:9000/.   You don't need to reploy or reload anything -- changing any source code while the server is running will automatically recompile and hot-reload the application on the next HTTP request. 
 
+If you want to make a package in the local and share this pakage to the other project .
+```
+$ sbt publishLocal
+```
+We will receive the new files
+```
+[info]  published scala-api-lib_2.11 to /Users/PhanVanTrung/.ivy2/local/vn.co.pvt.scala-api-lib/scala-api-lib_2.11/0.0.1/poms/scala-api-lib_2.11.pom
+[info]  published scala-api-lib_2.11 to /Users/PhanVanTrung/.ivy2/local/vn.co.pvt.scala-api-lib/scala-api-lib_2.11/0.0.1/jars/scala-api-lib_2.11.jar
+[info]  published scala-api-lib_2.11 to /Users/PhanVanTrung/.ivy2/local/vn.co.pvt.scala-api-lib/scala-api-lib_2.11/0.0.1/srcs/scala-api-lib_2.11-sources.jar
+[info]  published scala-api-lib_2.11 to /Users/PhanVanTrung/.ivy2/local/vn.co.pvt.scala-api-lib/scala-api-lib_2.11/0.0.1/docs/scala-api-lib_2.11-javadoc.jar
+[info]  published ivy to /Users/PhanVanTrung/.ivy2/local/vn.co.pvt.scala-api-lib/scala-api-lib_2.11/0.0.1/ivys/ivy.xml
+
+```
+At the new project, add the following code to build.sbt file
+```
+libraryDependencies := Seq(
+  "vn.co.pvt"    %% "scala-api-lib"   % "0.0.1",
+  )
+```
+
 ### Usage
 
 If you call the same URL from the command line, you’ll see JSON. Using httpie, we can execute the command:

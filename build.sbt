@@ -7,7 +7,7 @@ import sbt.Keys._
 //ommon settings into a sequence
 lazy val commonSettings = Seq(
   name := "scala-api-lib",
-  organization := "vn.co.pvt.scala-api-lib",
+  organization := "vn.co.pvt",
   version := "0.0.1",
   scalaVersion := "2.11.8",
   libraryDependencies ++= Seq   (
